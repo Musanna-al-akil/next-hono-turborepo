@@ -8,9 +8,8 @@ const nextConfig: NextConfig = {
         return [
             {
                 source: "/api/:path*",
-                destination: isProduction
-                    ? "https://next-hono-turborepo-api.vercel.app/api/:path*"
-                    : "http://localhost:3001/api/:path*",
+                destination:
+                    process.env.NEXT_PUBLIC_API_BASE_URL + "/api/:path*",
             },
         ];
     },
