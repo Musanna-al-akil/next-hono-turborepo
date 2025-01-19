@@ -1,13 +1,14 @@
 {
-  "name": "api",
-  "scripts": {
-    "start": "vercel dev",
-    "deploy": "vercel"
-  },
-  "dependencies": {
-    "hono": "^4.6.17"
-  },
-  "devDependencies": {
-    "vercel": "^32.4.1"
-  }
+    "name": "api",
+    "scripts": {
+        "start": "vercel dev",
+        "deploy": "vercel"
+    },
+    "dependencies": {
+        "hono": "^4.6.17"
+    },
+    "devDependencies": {
+        "vercel": "^32.4.1"
+    },
+    "type": "module"
 }
