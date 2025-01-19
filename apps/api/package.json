@@ -1,17 +1,25 @@
 {
     "version": "0.0.2",
     "name": "api",
-    "private": true,
     "type": "module",
     "scripts": {
-        "start": "vercel dev --listen 3001",
-        "deploy": "vercel"
+        "start": "bun run build && vercel dev --listen 3001",
+        "deploy": "vercel",
+        "turbo:dev": "bun run build && vercel dev --listen 3001",
+        "build": "tsc && tsc-alias"
     },
     "dependencies": {
         "@hono/node-server": "^1.13.7",
         "hono": "^4.6.17"
     },
     "devDependencies": {
-        "vercel": "^39.3.0"
+        "@antfu/eslint-config": "^3.7.3",
+        "@types/node": "^22.10.7",
+        "eslint": "^9.12.0",
+        "install": "^0.13.0",
+        "tsc-alias": "^1.8.10",
+        "typescript": "^5.6.2",
+        "vercel": "^39.3.0",
+        "tsx": "^4.19.1"
     }
 }

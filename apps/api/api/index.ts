@@ -1,20 +1,8 @@
 import { handle } from "@hono/node-server/vercel";
-import { Hono } from "hono";
 
-const app = new Hono().basePath("/api");
-
-app.get("/", (c) => {
-    return c.body("Hello from Honofadsf!");
-});
-
-
-app.get("/message", (c) => {
-  return c.body("Hello from ");
-});
-
-app.post("/", async (c) => {
-    const input = await c.req.json();
-    return c.json(input);
-});
+// @ts-expect-error
+// eslint-disable-next-line ts/ban-ts-comment
+// eslint-disable-next-line antfu/no-import-dist
+import app from "../dist/src/app.js";
 
 export default handle(app);
