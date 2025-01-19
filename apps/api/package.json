@@ -1,8 +1,10 @@
 {
     "version": "0.0.2",
+    "name": "api",
+    "private": true,
     "type": "module",
     "scripts": {
-        "start": "vercel dev",
+        "start": "vercel dev --listen 3001",
         "deploy": "vercel"
     },
     "dependencies": {
