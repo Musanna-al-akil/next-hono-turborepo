@@ -1,14 +1,20 @@
+import { handle } from "@hono/node-server/vercel";
 import { Hono } from "hono";
-import { handle } from "hono/vercel";
 
-const app = new Hono();
+const app = new Hono().basePath("/api");
 
 app.get("/", (c) => {
-    return c.json({ message: "Hello Hono!" });
+    return c.body("Hello from Honofadsf!");
 });
 
-app.get("/api/hello", (c) => {
-    return c.json({ message: "Hello Hono!" });
+
+app.get("/message", (c) => {
+  return c.body("Hello from ");
+});
+
+app.post("/", async (c) => {
+    const input = await c.req.json();
+    return c.json(input);
 });
 
 export default handle(app);
