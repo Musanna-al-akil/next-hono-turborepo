@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
             {
                 source: "/api/:path*",
                 destination:
-                    "next-hono-turborepo-api.vercel.app" + "/api/:path*",
+                    "https://next-hono-turborepo-api.vercel.app/api/:path*",
             },
         ];
     },
